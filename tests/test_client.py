@@ -1,0 +1,12 @@
+from unittest import TestCase
+import joom
+
+class TestValidator(TestCase):
+
+    def test_client(self):
+
+        access_token = 'SEV0001MTUxMTc4NDczOHxLRkFqeDc5V1JqYXJza041dXE0YVg3Nl9fUUV2WWZvX3dCRDdiaVFGOW9FMEhDN3pSY0duX0dmdC1wVDJ4enJ1cWc3YmlZWFZxckF4S2tHeE90ZUszSWpjRXp3LVBPbF9uSGptRE1PTWpQSHdKVVZDVkJmOUF0d2JhVjQwZHdWNmMya292ZHFSZnNURDQzWk8yTjBGRjZJRC1uMXVBYVBYUlp6Njlqdz18B6Z-9sPvuYRBtkIl37ZjBtRvgQkn18S6Q6mJ4kSzdj8='
+        refresh_token = 'SEV0001MTQ5MDA4NzI5NHwwQWtILWNNRDF5UXVXRVRlYmxlcllIQ3FVUUpXMnlEcWRQbTc1UG14ektfT0J1THotYlUwMVhjaVVBQVJsSDV6LUEtYkpzOUh3YXlzejRuY1dCNFl5Q3hNdFVNenJ3bC1UcExrdXpuazNnWkhxUWY3blJkZFVieVhvTm5lTDZjejV3Y0RUN0N3c2M3RlhYc1U0eTdkdEYyT1pvY2g2YmFEMndHV2FDeFBETWNzYkxDS1BZLXYwZ0NEMVo2UFVhMnpqQT09fFnoM79E8xZIM26xi9yuUcl8UzFqntaJWWX25vEGWZep'
+
+        client = joom.Client(access_token)
+        client.order.retrieve_recently_changed_orders(since="2017-01-20T20:10:20")
