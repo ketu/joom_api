@@ -1,7 +1,7 @@
 from unittest import TestCase
 import joom
 
-class TestValidator(TestCase):
+class TestClient(TestCase):
 
     def test_client(self):
 

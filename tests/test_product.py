@@ -2,7 +2,7 @@ from unittest import TestCase
 import joom
 import json
 
-class TestValidator(TestCase):
+class TestProduct(TestCase):
 
     def test_product_retrieve(self):
         access_token = 'SEV0001MTUxMTkxNDM0Mnx0X29BYno3ZlNYbjZOZ2ZucE5sbkhNX2dLV3g4NmdWSnNINDlkQmsyLWtiQVdUOW91V2VTOWZpYVFsU3pQeEZYcFNYT2NYLXU0TTZVeG5ITUxyUi11Nng2eXRkV3hYOEtHaU9DZzFVN0RxbFp0MmI4a19pMDFTMFg2elJ2eUR4ck9BOEw2NlNUbWZRdnI0c0s4QlZCOUV1aEpJWTNnNlJrVHNsaGFnPT18KeIHZ5m6AcRRsxtIeJDMGLU6RxAZWvYR6LUnC1PO820='
