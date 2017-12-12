@@ -6,7 +6,7 @@ from .resource import Resource
 
 class Product(Resource):
 
-    def add(self, product_data):
+    def create(self, product_data):
         """
         The /product/add endpoint creates a new product.
         It also createы the first variant of that product, so if a product has a single variant,

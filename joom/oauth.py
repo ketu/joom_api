@@ -1,23 +1,24 @@
 # /usr/bin/env python
 # -*- coding:utf8 -*-
 
-from requests_oauthlib import OAuth2Session
-from .settings import BASE_AUTHORIZATION_URL, BASE_URL
+import requests
+from .settings import BASE_AUTHORIZATION_URL, BASE_ACCESS_TOKEN, BASE_REFRESH_TOKEN
+from urllib.parse import urljoin, urlparse, urlencode
 
-print(BASE_AUTHORIZATION_URL)
 class Token(object):
 
     def __init__(self, client_id, client_secret):
-        self.client_id =client_id
+        self.client_id = client_id
         self.client_secret = client_secret
 
-        self.joom = OAuth2Session(client_id=self.client_id)
 
-    def make_authorization_url(self, ):
-        return self.joom.authorization_url(BASE_AUTHORIZATION_URL)
+    def make_authorization_url(self):
+        pass
 
+    def fetch_token(self, authorization_code):
+        token = self.joom.fetch_token(BASE_ACCESS_TOKEN, code=authorization_code, client_secret=self.client_secret)
 
-    def fetch_token(self):
+    def fetch_token_by_refresh_token(self, refresh_token):
         pass
 
 

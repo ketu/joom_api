@@ -6,7 +6,7 @@ from .resource import Resource
 
 class Variation(Resource):
 
-    def add(self, variation_data):
+    def create(self, variation_data):
         """
         To add a new variation to a product you can create a product variation.
         For example, a product has sizes “Large” and “Extra-Large” and you wanted to add size “Medium”,
