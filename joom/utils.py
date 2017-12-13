@@ -10,4 +10,4 @@ def build_response(resp):
         if "data" in b:
             return b["data"]
         return b
-    raise AttributeError(b['message'])
+    raise ValueError(b['message'])

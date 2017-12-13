@@ -13,7 +13,7 @@ class TestProduct(TestCase):
         }
         client = joom.Client(access_token)
 
-        product = client.product.retrieve(id="1494497392564826966-5-1-709-1145779227")
+        product = client.product.retrieve(id="55-5-1-709-1145779227")
 
         product = product["Product"]
 
