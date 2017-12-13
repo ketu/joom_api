@@ -3,9 +3,8 @@
 
 from .resource import Resource
 
-
+__all__ = ["Order"]
 class Order(Resource):
-
     def retrieve(self, **kwargs):
         """
         Retrieve an Order
@@ -94,6 +93,3 @@ class Order(Resource):
         :return:
         """
         return self.client.execute("order/shipping-label", "POST", kwargs)
-
-
-

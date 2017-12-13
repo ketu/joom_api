@@ -2,10 +2,9 @@
 # -*- coding:utf8 -*-
 
 from .resource import Resource
-
+__all__ = ["Product"]
 
 class Product(Resource):
-
     def create(self, product_data):
         """
         The /product/add endpoint creates a new product.
@@ -18,7 +17,7 @@ class Product(Resource):
         :param product_data:
         :return:
         """
-        return self.client.execute("/product/add", "POST", product_data)
+        return self.client.execute("product/add", "POST", product_data)
 
     def disable(self, **kwargs):
         """

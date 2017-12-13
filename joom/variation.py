@@ -3,9 +3,10 @@
 
 from .resource import Resource
 
+__all__ = ["Variation"]
+
 
 class Variation(Resource):
-
     def create(self, variation_data):
         """
         To add a new variation to a product you can create a product variation.
@@ -14,7 +15,7 @@ class Variation(Resource):
         :param variation_data:
         :return:
         """
-        return self.client.execute("/variant/add", "POST", variation_data)
+        return self.client.execute("variant/add", "POST", variation_data)
 
     def retrieve(self, **kwargs):
         """
@@ -25,19 +26,19 @@ class Variation(Resource):
         :param kwargs:
         :return:
         """
-        return self.client.execute("/variant", "GET", kwargs)
+        return self.client.execute("variant", "GET", kwargs)
 
-    def update(self, **kwargs):
+    def update(self, update_data):
         """
         Update a Product Variation
         Updates the specified variation by updating the attributes of the parameters passed in the request.
         Any attribute not provided will be left unchanged.
         This request can only update attributes specific to variations and cannot be used to update any attribute of a Product.
         POST https://api-merchant.joom.com/api/v2/variant/update
-        :param kwargs:
+        :param update_data:
         :return:
         """
-        return self.client.execute("/variant/update", "POST", kwargs)
+        return self.client.execute("variant/update", "POST", update_data)
 
     def change_sku(self, **kwargs):
         """

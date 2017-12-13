@@ -1,7 +1,13 @@
-BASE_URL = "https://api-merchant.joom.com/api/v2/"
+from urllib.parse import urljoin
 
-BASE_AUTHORIZATION_URL = "https://api-merchant.joom.com/api/v2/oauth/authorize"
+BASE_URL = "https://api-merchant.joom.com/"
 
-BASE_ACCESS_TOKEN = "https://api-merchant.joom.com/api/v2/oauth/access_token"
+BASE_ENDPOINT = "api/v2/"
 
-BASE_REFRESH_TOKEN = "https://api-merchant.joom.com/api/v2/oauth/refresh_token"
+FULL_BASE_URL = urljoin(BASE_URL, BASE_ENDPOINT)
+
+BASE_AUTHORIZATION_URL = urljoin(FULL_BASE_URL, "oauth/authorize")
+
+BASE_ACCESS_TOKEN_URL = urljoin(FULL_BASE_URL, "oauth/access_token")
+
+BASE_REFRESH_TOKEN_URL = urljoin(FULL_BASE_URL, "oauth/refresh_token")

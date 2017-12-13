@@ -1,6 +1,6 @@
 
-__all__ = ["Client", "Token"]
+__all__ = ["Client", "Oauth"]
 
 from .client import Client
-from .oauth import Token
+from .oauth import Oauth
 
